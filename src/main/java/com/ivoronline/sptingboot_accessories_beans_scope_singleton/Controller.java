@@ -16,16 +16,17 @@ public class Controller {
   // SET PERSON NAME
   //=========================================================================================================
   @RequestMapping("setPersonName")
-  void setPerson(@RequestParam String name) {
-    person1.name = name;
+  void setPerson() {
+    person1.name = "John";   //Setting the same Bean
+    person2.name = "Bill";   //Setting the same Bean
   }
   
   //=========================================================================================================
   // GET PERSON NAME
   //=========================================================================================================
   @RequestMapping("getPersonName")
-  String setPerson() {
-    return person2.name;
+  String getPerson() {
+    return person1.name + " - " + person2.name;
   }
 
 }
